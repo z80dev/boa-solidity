@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "boa-solidity"
+version = "0.1.0"
+description = "Solidity support for Titanoboa"
+authors = ["z80 <z80@ophy.xyz>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+titanoboa = { git = "https://github.com/vyperlang/titanoboa.git" }
+py-solc-x = "^2.0.2"
+eth-abi = "^5.0.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
