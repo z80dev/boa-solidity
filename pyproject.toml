@@ -1,14 +1,15 @@
 [tool.poetry]
 name = "boa-solidity"
-version = "0.1.0"
+version = "0.1.1"
 description = "Solidity support for Titanoboa"
 authors = ["z80 <z80@ophy.xyz>"]
 license = "MIT"
 readme = "README.md"
+repository = "https://github.com/z80dev/boa-solidity"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-titanoboa = { git = "https://github.com/vyperlang/titanoboa.git" }
+titanoboa = "^0.1.9"
 py-solc-x = "^2.0.2"
 eth-abi = "^5.0.1"
 
