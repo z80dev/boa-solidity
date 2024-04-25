@@ -6,11 +6,11 @@ class SolDeployer:
     def __init__(self, abi, bytecode, filename=None, env=None):
         self.env = env or Env.get_singleton()
         self.abi = abi
-        self.types = [
+        self.types = next(iter([
             [x["type"] for x in entry["inputs"]]
             for entry in abi
             if entry["type"] == "constructor"
-        ][0]
+        ]), [])
         self.bytecode = bytecode
         self.filename = filename
         self.factory = ABIContractFactory.from_abi_dict(abi)
