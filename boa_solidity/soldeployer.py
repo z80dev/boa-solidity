@@ -15,11 +15,11 @@ class SolDeployer:
         self.filename = filename
         self.factory = ABIContractFactory.from_abi_dict(abi)
 
-    def deploy(self, *args):
+    def deploy(self, *args, **kwargs):
         if len(args) != len(self.types):
             raise ValueError(f"Expected {len(self.types)} arguments, got {len(args)}")
         encoded_args = abi.encode(self.types, args)
-        address, _ = self.env.deploy_code(bytecode=self.bytecode + encoded_args)
+        address, _ = self.env.deploy_code(bytecode=self.bytecode + encoded_args, **kwargs)
         return self.factory.at(address)
 
     def __call__(self):
