@@ -9,7 +9,7 @@ repository = "https://github.com/z80dev/boa-solidity"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-titanoboa = "^0.1.9"
+titanoboa = "^0.2.0"
 py-solc-x = "^2.0.2"
 eth-abi = "^5.0.1"
 
